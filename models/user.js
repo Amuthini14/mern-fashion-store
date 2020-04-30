@@ -33,7 +33,7 @@ const userSchema = mongoose.Schema({
 
 //to create  user model, use mongoose.model, param 1 - name of the collection, param - 2 - schema
 
-const userModel = mongoose.model('User', userSchema); 
+const UserModel = mongoose.model('User', userSchema); 
 
-module.exports = {userModel};
+module.exports = {UserModel};
 
