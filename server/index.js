@@ -21,6 +21,13 @@ app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.json());
 app.use(cookieParser());
 
+app.get('/', (req, res) => {
+    res.json({"hello": "happy to deploy to heroku"})
+
+});
+
+
+
 app.get('/api/user/auth',authentication, (req, res) => {
         res.status(200).json({
             _id:req._id,
