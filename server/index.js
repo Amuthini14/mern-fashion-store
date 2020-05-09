@@ -123,7 +123,7 @@ app.get('/api/user/logout',authentication, (req, res ) =>{
 
 })
 
-
+// make the port dynamic , sothat we can run the app to the give port by heroku(5000 - only for development mode)
 const port = process.env.PORT || 5000
 app.listen(port, () => {
     console.log(`Server Running At ${port}`);
