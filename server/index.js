@@ -15,6 +15,14 @@ const {authentication} = require("./middleware/authentication");
 mongoose.connect( config.mongoDbURI,
 {useNewUrlParser:true} ).then(() => console.log('DB Connected')).catch(err => console.error(err));
 
+
+//sample testing to heroku
+app.get("/", (req, res) => {
+    res.json({"hello": "check deployment to heroku"})
+})
+
+
+
 // body-parser as middle ware
 app.use(bodyParser.urlencoded({extended:true}));
 // to be able to read the json
